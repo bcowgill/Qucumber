@@ -1,0 +1,49 @@
+/**
+ * Qucumber - A JavaScript Behavioural Driven Development Testing Framework for QUnit
+ *
+ */
+article,aside,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+/* Font Family and sizes */
+#bdd-specs,#bdd-tests,#bdd-id,#bdd-feature,.bdd-scenario,.xbdd-scenario,.bdd-spec,.xbdd-spec,.bdd-table,.xbdd-table,.bdd-case-header,.bdd-case-data {
+	font-family: "Helvetica Neue Light", "HelveticaNeue-Light",
+		"Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+#bdd-specs,#bdd-tests,#bdd-id,#bdd-feature {
+	font-size: small;
+}
+
+/* Resets */
+#bdd-specs,#bdd-tests,#bdd-id,#bdd-feature,.bdd-scenario,.xbdd-scenario,.bdd-spec,.xbdd-spec,.bdd-table,.xbdd-table,.bdd-case-header,.bdd-case-data {
+	margin: 0;
+	padding: 0;
+}
+
+/* Colors */
+#bdd-specs,#bdd-tests,#bdd-id,#bdd-feature {
+	color: #2b81af;
+	background-color: #D2E0E6;
+	border-bottom: 1px solid white;
+}
+
+.bdd-skip {
+	color: #22678c;
+	background-color: #A8B3B8;
+}
+
+#bdd-feature,#bdd-id {
+  color: #366097;
+}
+
+/* Padding */
+
+#bdd-specs,#bdd-tests {
+	padding: 0.5em 0.5em 0.5em 2.5em;
+}
+
+div .bdd-spec,div .xbdd-spec,div .bdd-table,div .xbdd-table {
+	padding: 0.5em 0.5em 0.5em 2.5em;
+}

@@ -2,6 +2,7 @@
 <html>
 <head>
 <link href="../QUnitChainer/qunit/qunit.css" rel="stylesheet" type="text/css" />
+<link href="qucumber.css" rel="stylesheet" type="text/css" />
 <script src="../QUnitChainer/qunit/qunit.js"></script>
 <script src="../QUnitChainer/jquery/jquery-1.6.2.min.js"></script>
 <meta charset=utf-8 />
@@ -9,80 +10,92 @@
 <!--[if IE]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<style>
-  article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
-</style>
 </head>
 <body>
-  <h1 id="qunit-header">Qucumber Example Test</h1>  
-  <h2 id="qunit-banner"></h2>  
-  <h2 id="qunit-userAgent"></h2>  
-  <ol id="qunit-tests">  
-  </ol> 
-  <hr>
-  <div id="bdd-spec"></div>
-  <hr>
-  
-      <div id="bdd-tests">
-         <div id="bdd-id">USNNNN</div>
-         <div id="bdd-feature">Feature: <span class="bdd-as-a">As an X</span> <span class="i-want">I want Y</span> <span class="bdd-so-that">so that Z</span></div>
-         
-         <div class="bdd-scenario">Scenario 1: Success Case
-            <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
-            <div class="bdd-spec bdd-given">and the screen is &lt;horizontal&gt;</div>
-            <div class="bdd-spec bdd-when">When the user taps on &lt;Y&gt;</div>
-            <div class="bdd-spec bdd-when">and the user turns the screen to &lt;vertical&gt;</div>
-            <div class="bdd-spec bdd-then">Then the user sees &lt;success&gt;</div>
-            <div class="bdd-spec bdd-then">and the user hears &lt;Yes!&gt;</div>
-    </div>   
-         <hr>
+   <h1 id="qunit-header">Qucumber Example Test</h1>
+   <h2 id="qunit-banner"></h2>
+   <h2 id="qunit-userAgent"></h2>
+   <ol id="qunit-tests">
+   </ol>
+   <div id="bdd-specs"></div>
+   <div id="bdd-tests">
+      <div id="bdd-id"><strong>USNNNN</strong></div>
+      <div id="bdd-feature">
+         <strong>Feature:</strong> 
+         <span class="bdd-as-a">As an X</span> 
+         <span class="bdd-i-want">I want Y</span> 
+         <span class="bdd-so-that">so that Z</span>
+      </div>
 
-         <div class="bdd-scenario">Scenario 2: Failure Case
-            <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
-            <div class="bdd-spec bdd-given">and the screen is &lt;vertical&gt;</div>
-            <div class="bdd-spec bdd-when">When the user taps on &lt;Z&gt;</div>
-            <div class="bdd-spec bdd-when">and the user turns the screen to &lt;horizontal&gt;</div>
-            <div class="bdd-spec bdd-then">Then the user sees &lt;failure&gt;</div>
-            <div class="bdd-spec bdd-then">and the user hears &lt;FAIL!&gt;</div>
-    </div>   
-         <hr>
-         
-         <div class="bdd-skip bdd-scenario">Scenario 3: Skipped Case using bdd-skip class
-            <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
-            <div class="bdd-spec bdd-when">When the user taps on &lt;Z&gt;</div>
-            <div class="bdd-spec bdd-then">Then the user sees &lt;nice!&gt;</div>
+      <div>
+         <strong class="bdd-scenario">Scenario 1: Success Case</strong>
+         <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
+         <div class="bdd-spec bdd-given">and the screen is &lt;horizontal&gt;</div>
+         <div class="bdd-spec bdd-when">When the user taps on &lt;Y&gt;</div>
+         <div class="bdd-spec bdd-when">and the user turns the screen to &lt;vertical&gt;</div>
+         <div class="bdd-spec bdd-then">Then the user sees &lt;success&gt;</div>
+         <div class="bdd-spec bdd-then">and the user hears &lt;Yes!&gt;</div>
+      </div>
+
+      <div>
+         <strong class="bdd-scenario">Scenario 2: Failure Case</strong>
+         <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
+         <div class="bdd-spec bdd-given">and the screen is &lt;vertical&gt;</div>
+         <div class="bdd-spec bdd-when">When the user taps on &lt;Z&gt;</div>
+         <div class="bdd-spec bdd-when">and the user turns the screen to &lt;horizontal&gt;</div>
+         <div class="bdd-spec bdd-then">Then the user sees &lt;failure&gt;</div>
+         <div class="bdd-spec bdd-then">and the user hears &lt;FAIL!&gt;</div>
+      </div>
+
+      <div class="bdd-skip">
+         <strong class="bdd-skip bdd-scenario">Scenario 3: Skipped Case using bdd-skip class</strong>
+         <div class="bdd-spec bdd-given">Given the system in state &lt;X&gt;</div>
+         <div class="bdd-spec bdd-when">When the user taps on &lt;Z&gt;</div>
+         <div class="bdd-spec bdd-then">Then the user sees &lt;nice!&gt;</div>
+      </div>
+
+      <div class="bdd-skip">
+         <strong class="bdd-skip xbdd-scenario">Scenario 4: Scenario with a Table</strong>
+         <div class="xbdd-spec bdd-given">Given the system in state &lt;STATE&gt;</div>
+         <div class="xbdd-spec bdd-when">When the user taps on &lt;REGION&gt;</div>
+         <div class="xbdd-spec bdd-then">Then the user sees &lt;OUTPUT&gt;</div>
+         <div class="xbdd-table">
+            Scenarios:
+            <div class="bdd-case-header">|STATE|REGION|OUTPUT|</div>
+            <div class="bdd-case-data">|init|close|closed|</div>
+            <div class="bdd-case-data">|shut|open|opened|</div>
          </div>
-         <hr>
-        
-         <div class="xbdd-skip bdd-scenario">Scenario 4: Scenario with a Table
-            <div class="xbdd-spec bdd-given">Given the system in state &lt;STATE&gt;</div>
-            <div class="xbdd-spec bdd-when">When the user taps on &lt;REGION&gt;</div>
-            <div class="xbdd-spec bdd-then">Then the user sees &lt;OUTPUT&gt;</div>
-                 <div class="xbdd-table">Scenarios:
-                   <div class="xbdd-case-header">|STATE|REGION|OUTPUT|</div>
-                   <div class="xbdd-case-data">|init|close|closed|</div>
-                   <div class="xbdd-case-data">|shut|open|opened|</div>
-                 </div>             
-           </div>
+      </div>
+
+      <div class="bdd-skip">
+         <strong class="bdd-skip xbdd-scenario">Scenario 5: Scenario with a Table</strong>
+         <div class="xbdd-spec bdd-given">Given the system in state &lt;STATE&gt;</div>
+         <div class="xbdd-spec bdd-when">When the user taps on &lt;REGION&gt;</div>
+         <div class="xbdd-spec bdd-then">Then the user sees &lt;OUTPUT&gt;</div>
+         <div class="xbdd-table">
+            Scenarios:
+            <table border="1" class="bdd-cases">
+               <tr>
+                  <th>STATE</th>
+                  <th>REGION</th>
+                  <th>OUTPUT</th>
+               </tr>
+               <tr>
+                  <td>init</td>
+                  <td>close</td>
+                  <td>closed</td>
+               </tr>
+               <tr>
+                  <td>shut</td>
+                  <td>open</td>
+                  <td>opened</td>
+               </tr>
+            </table>
          </div>
-         <hr>
-        
-         <div class="xbdd-skip bdd-scenario">Scenario 5: Scenario with a Table
-            <div class="xbdd-spec bdd-given">Given the system in state &lt;STATE&gt;</div>
-            <div class="xbdd-spec bdd-when">When the user taps on &lt;REGION&gt;</div>
-            <div class="xbdd-spec bdd-then">Then the user sees &lt;OUTPUT&gt;</div>
-                 <div class="xbdd-table">Scenarios:
-                   <table border="1" class="xbdd-cases">
-                     <tr><th>STATE</th><th>REGION</th><th>OUTPUT</th></tr>
-                     <tr><td>init</td><td>close</td><td>closed</td></tr>
-                     <tr><td>shut</td><td>open</td><td>opened</td></tr>
-                   </table>
-                 </div>             
-         </div>
-         <hr>
-      <hr>
-<script src="Qucumber.js"></script>  
-<script src="test-plan.js"></script>  
+      </div>
+   </div>
+   <hr>
+<script src="Qucumber.js"></script>
+<script src="test-plan.js"></script>
 </body>
 </html>

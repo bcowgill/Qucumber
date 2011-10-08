@@ -172,7 +172,7 @@ delete Plan.Then['-'];
 
 jQuery(document).ready(function () {
    var noRules, rSpecs;
-   jQuery('#bdd-spec').html(Specs.join("<br>"));
+   jQuery('#bdd-specs').html(Specs.join("<br>"));
 
    noRules = { Scenario: {}, Given: {}, When: {}, Then: {} };
 
