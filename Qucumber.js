@@ -132,6 +132,7 @@ Qucumber.prototype.getTypeName = function (thing) {
    var type = typeof thing;
 
    if (type === 'object') {
+      // http://stackoverflow.com/questions/332422/how-do-i-get-the-name-of-an-objects-type-in-javascript
       type = Object.prototype.toString.call(thing).match(/^\[object (.*)\]$/)[1];
       if (type === 'Object' && typeof thing.typeName !== 'undefined') {
          type = thing.typeName;
