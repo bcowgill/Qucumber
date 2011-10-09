@@ -5,11 +5,22 @@
 <link href="qucumber.css" rel="stylesheet" type="text/css" />
 <script src="../QUnitChainer/qunit/qunit.js"></script>
 <script src="../QUnitChainer/jquery/jquery-1.6.2.min.js"></script>
+<script src="../QUnitChainer/QUnitChainer.js"></script>
+<!--[if lt IE 8 ]> <script src="../json2/json2.js"></script> <![endif]-->
 <meta charset=utf-8 />
 <title>Qucumber Example Test</title>
 <!--[if IE]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script>
+var Plan = {
+  // Specify the test plan to run after this one
+//  nextTestPlan: '../QUnitChainer/0-control.html',
+  nextTestPlan: '../QUnitChainer/sample/q-test.html',
+  '-': '-'
+};
+QUnitChainer.init(Plan);
+</script>
 </head>
 <body>
    <h1 id="qunit-header">Qucumber Example Test</h1>
@@ -21,9 +32,9 @@
    <div id="bdd-tests">
       <div id="bdd-id"><strong>USNNNN</strong></div>
       <div id="bdd-feature">
-         <strong>Feature:</strong> 
-         <span class="bdd-as-a">As an X</span> 
-         <span class="bdd-i-want">I want Y</span> 
+         <strong>Feature:</strong>
+         <span class="bdd-as-a">As an X</span>
+         <span class="bdd-i-want">I want Y</span>
          <span class="bdd-so-that">so that Z</span>
       </div>
 

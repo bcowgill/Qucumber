@@ -3,35 +3,37 @@
  *
  */
 article,aside,figure,footer,header,hgroup,menu,nav,section {
-	display: block;
+   display: block;
 }
 
 /* Font Family and sizes */
 #bdd-specs,#bdd-tests,#bdd-id,#bdd-feature,.bdd-scenario,.xbdd-scenario,.bdd-spec,.xbdd-spec,.bdd-table,.xbdd-table,.bdd-case-header,.bdd-case-data {
-	font-family: "Helvetica Neue Light", "HelveticaNeue-Light",
-		"Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+   font-family: "Helvetica Neue Light", "HelveticaNeue-Light",
+      "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 }
 
 #bdd-specs,#bdd-tests,#bdd-id,#bdd-feature {
-	font-size: small;
+   font-size: small;
 }
 
 /* Resets */
 #bdd-specs,#bdd-tests,#bdd-id,#bdd-feature,.bdd-scenario,.xbdd-scenario,.bdd-spec,.xbdd-spec,.bdd-table,.xbdd-table,.bdd-case-header,.bdd-case-data {
-	margin: 0;
-	padding: 0;
+   margin: 0;
+   padding: 0;
 }
 
 /* Colors */
 #bdd-specs,#bdd-tests,#bdd-id,#bdd-feature {
-	color: #2b81af;
-	background-color: #D2E0E6;
-	border-bottom: 1px solid white;
+   color: #2b81af;
+   background-color: #D2E0E6;
+   border-bottom: 1px solid white;
 }
 
 .bdd-skip {
-	color: #22678c;
-	background-color: #A8B3B8;
+// color: #22678c;
+// background-color: #A8B3B8;
+   background-color: #2b81af;
+   color: #D2E0E6;
 }
 
 #bdd-feature,#bdd-id {
@@ -41,9 +43,9 @@ article,aside,figure,footer,header,hgroup,menu,nav,section {
 /* Padding */
 
 #bdd-specs,#bdd-tests {
-	padding: 0.5em 0.5em 0.5em 2.5em;
+   padding: 0.5em 0.5em 0.5em 2.5em;
 }
 
 div .bdd-spec,div .xbdd-spec,div .bdd-table,div .xbdd-table {
-	padding: 0.5em 0.5em 0.5em 2.5em;
+   padding: 0.5em 0.5em 0.5em 2.5em;
 }
