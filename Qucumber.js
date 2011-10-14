@@ -20,6 +20,12 @@ Object.prototype.getName = function() {
 };
 */
 
+// You should test this in Firefox with firebug open and closed as window.console
+// behaves differently in these cases.
+if (!window.console) {
+   window.console = {log: function () {}};
+}
+
 /*
    Qucumber()
 
